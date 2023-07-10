@@ -27,17 +27,9 @@ public class LoginPage {
         return this;
     }
 
-    public LoginPage clickLoginButton() {
+    public FeedGlobalPage clickLoginButton() {
         $(By.xpath(LOGIN_BUTTON)).click();
-        return this;
-    }
-
-    //move to service
-
-    public FeedGlobalPage login(User user) {
-        enterEmail(user.getUserEmail())
-                .enterPassword(user.getUserPassword())
-                .clickLoginButton();
         return new FeedGlobalPage();
     }
+
 }
